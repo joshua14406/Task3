@@ -1,0 +1,10 @@
+digraph C {
+  rankdir=LR; bgcolor=white;
+  node [shape=circle fontname="Helvetica" fontsize=12];
+  edge [fontname="Helvetica" fontsize=10];
+  start [shape=point width=0.08];
+  out [shape=doublecircle label="out"]; in [label="in"];
+  start -> out;
+  out -> out [label="t"]; out -> in [label="O (/*)"];
+  in -> in [label="t, O"]; in -> out [label="C (*/)"];
+}

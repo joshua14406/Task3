@@ -1,0 +1,25 @@
+digraph "M3: NPDA for an RNA hairpin" {
+  rankdir=LR; bgcolor=white;
+  node [shape=circle fontname="Helvetica" fontsize=12];
+  edge [fontname="Helvetica" fontsize=10];
+  start [shape=point width=0.08];
+  "s" [shape=circle];
+  "q" [shape=circle];
+  "l0" [shape=circle];
+  "l1" [shape=circle];
+  "l2" [shape=circle];
+  "l3" [shape=circle];
+  "p" [shape=circle];
+  "f" [shape=doublecircle];
+  start -> "s";
+  "s" -> "q" [label="x, Z / xZ\l"];
+  "q" -> "q" [label="x, X / xX\l"];
+  "q" -> "l0" [label="ε, X / X  (guess: loop starts)\l"];
+  "l0" -> "l1" [label="x, X / X\l"];
+  "l1" -> "l2" [label="x, X / X\l"];
+  "l2" -> "l3" [label="x, X / X\l"];
+  "l3" -> "l3" [label="x, X / X\l"];
+  "l3" -> "p" [label="ε, X / X  (guess: loop ends)\l"];
+  "p" -> "p" [label="x̄, x / ε\l"];
+  "p" -> "f" [label="ε, Z / Z\l"];
+}

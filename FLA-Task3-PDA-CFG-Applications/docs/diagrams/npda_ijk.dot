@@ -1,0 +1,30 @@
+digraph "M4: NPDA for i = j or j = k" {
+  rankdir=LR; bgcolor=white;
+  node [shape=circle fontname="Helvetica" fontsize=12];
+  edge [fontname="Helvetica" fontsize=10];
+  start [shape=point width=0.08];
+  "s" [shape=circle];
+  "a1" [shape=circle];
+  "b1" [shape=circle];
+  "c1" [shape=doublecircle];
+  "a2" [shape=circle];
+  "b2" [shape=circle];
+  "c2" [shape=circle];
+  "f2" [shape=doublecircle];
+  start -> "s";
+  "s" -> "a1" [label="ε, Z / Z  (guess i = j)\l"];
+  "s" -> "a2" [label="ε, Z / Z  (guess j = k)\l"];
+  "a1" -> "a1" [label="a, Y / XY\l"];
+  "a1" -> "b1" [label="b, X / ε\l"];
+  "b1" -> "b1" [label="b, X / ε\l"];
+  "a1" -> "c1" [label="ε, Z / Z\l"];
+  "b1" -> "c1" [label="ε, Z / Z\l"];
+  "c1" -> "c1" [label="c, Z / Z\l"];
+  "a2" -> "a2" [label="a, Z / Z\l"];
+  "a2" -> "b2" [label="ε, Z / Z\l"];
+  "b2" -> "b2" [label="b, Y / XY\l"];
+  "b2" -> "c2" [label="c, X / ε\l"];
+  "c2" -> "c2" [label="c, X / ε\l"];
+  "b2" -> "f2" [label="ε, Z / Z\l"];
+  "c2" -> "f2" [label="ε, Z / Z\l"];
+}

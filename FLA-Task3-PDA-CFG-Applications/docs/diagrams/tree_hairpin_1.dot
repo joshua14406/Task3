@@ -1,0 +1,36 @@
+digraph T {
+  node [fontname="Helvetica" fontsize=12 shape=plaintext];
+  edge [arrowhead=none];
+  labelloc="t"; label="G3, folding 1 of gcuuuugc"; fontname="Helvetica"; fontsize=13;
+  n0 [label="S"];
+  n1 [label="g" fontcolor="#1a5fb4"];
+  n0 -> n1;
+  n2 [label="S"];
+  n3 [label="c" fontcolor="#1a5fb4"];
+  n2 -> n3;
+  n4 [label="L"];
+  n5 [label="N"];
+  n6 [label="u" fontcolor="#1a5fb4"];
+  n5 -> n6;
+  n4 -> n5;
+  n7 [label="L"];
+  n8 [label="N"];
+  n9 [label="u" fontcolor="#1a5fb4"];
+  n8 -> n9;
+  n7 -> n8;
+  n10 [label="N"];
+  n11 [label="u" fontcolor="#1a5fb4"];
+  n10 -> n11;
+  n7 -> n10;
+  n12 [label="N"];
+  n13 [label="u" fontcolor="#1a5fb4"];
+  n12 -> n13;
+  n7 -> n12;
+  n4 -> n7;
+  n2 -> n4;
+  n14 [label="g" fontcolor="#1a5fb4"];
+  n2 -> n14;
+  n0 -> n2;
+  n15 [label="c" fontcolor="#1a5fb4"];
+  n0 -> n15;
+}
